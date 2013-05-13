@@ -8,10 +8,10 @@
 		<artifactId>hv-android-sdk-parent</artifactId>
 		<version>1.3.1</version>
 	</parent>
-	<groupId>AndroidCustomWrite</groupId>
-	<artifactId>AndroidCustomWrite</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>AndroidCustomWrite</name>
+	<groupId>JourneyCompass</groupId>
+	<artifactId>JourneyCompass</artifactId>
+	<version>0.0.1</version>
+	<name>JourneyCompass</name>
 	<packaging>apk</packaging>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -47,7 +47,6 @@
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>android</artifactId>
-			<version>4.2.2</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -55,9 +54,10 @@
 			<artifactId>android-sdk</artifactId>
 			<version>1.3.1</version>
 		</dependency>
+			
 		<dependency>
 			<groupId>com.microsoft.hsg</groupId>
-			<artifactId>hv-jaxb</artifactId>
+			<artifactId>hv-sdk</artifactId>
 			<version>1.3.1</version>
 		</dependency>
 		<dependency>

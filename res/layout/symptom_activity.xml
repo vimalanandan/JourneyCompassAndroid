@@ -4,7 +4,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    tools:context="com.microsoft.hsg.android.custom.SymptomActivity" >
+    tools:context="com.microsoft.hsg.android.jc.SymptomActivity" >
+
+    <TextView
+        android:id="@+id/painLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pain_label" />
 
     <SeekBar
         android:id="@+id/painSeek"
@@ -17,17 +23,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/nauseaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nausea_label" />
+
     <SeekBar
         android:id="@+id/nauseaSeek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="100" 
-      />
+        android:max="100" />
 
     <TextView
         android:id="@+id/nauseaValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/constipationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/constipation_label" />
 
     <SeekBar
         android:id="@+id/constipationSeek"
@@ -40,6 +57,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/fatigueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fatigue_label" />
+
     <SeekBar
         android:id="@+id/fatigueSeek"
         android:layout_width="match_parent"
@@ -51,6 +74,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/sleepLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sleep_label" />
+
     <SeekBar
         android:id="@+id/sleepSeek"
         android:layout_width="match_parent"
@@ -61,14 +90,16 @@
         android:id="@+id/sleepValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
+<View
+  android:layout_width="1dp"
+  android:layout_height="50dp">
+</View>
     <Button
         android:id="@+id/putThing"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_weight=".2"
-        android:text="Add" >
+        android:text="Save" >
+
     </Button>
 
 </LinearLayout>

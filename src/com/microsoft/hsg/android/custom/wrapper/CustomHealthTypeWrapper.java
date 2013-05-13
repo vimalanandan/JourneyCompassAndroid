@@ -85,7 +85,7 @@ import java.util.Calendar;
 import org.xmlpull.v1.XmlPullParser;
 
 import com.microsoft.hsg.android.XmlUtils;
-import com.microsoft.hsg.android.custom.HealthRecordItemCustomBase;
+import com.microsoft.hsg.android.jc.HealthRecordItemCustomBase;
 
 public class CustomHealthTypeWrapper {
 	public static final String nullObjectTypeName = "NULLOBJECT";
