@@ -37,6 +37,10 @@
             android:name=".SymptomActivity"
             android:label="Symptom Input" >
         </activity>
+        <activity
+            android:name=".ReportActivity"
+            android:label="View Report" >
+        </activity>
          <service android:name="com.microsoft.hsg.android.jc.util.ConnectivityService" >
         </service>
     </application>

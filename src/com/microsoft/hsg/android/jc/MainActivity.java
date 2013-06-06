@@ -104,8 +104,16 @@ public class MainActivity extends Activity {
         InitializeControls();
         super.onResume();
     }
+	public void loadSymptomActivity(View arg){
+		Intent intent = new Intent(MainActivity.this, SymptomActivity.class);
+		MainActivity.this.startActivity(intent);
+	}
     
-    private void InitializeControls() {
+	public void loadReportActivity(View arg){
+		Intent intent = new Intent(MainActivity.this, ReportActivity.class);
+		MainActivity.this.startActivity(intent);
+	}
+	private void InitializeControls() {
         TextView msg = (TextView)findViewById(R.id.welcomeText);
         switch(service.getConnectionStatus()) {
         case Connected:

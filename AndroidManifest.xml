@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" >
     </uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -37,8 +38,17 @@
             android:name=".SymptomActivity"
             android:label="Symptom Input" >
         </activity>
-         <service android:name="com.microsoft.hsg.android.jc.util.ConnectivityService" >
-        </service>
+        <activity
+            android:name=".ReportActivity"
+            android:label="View Report" >
+        </activity>
+		<receiver android:name="com.microsoft.hsg.android.jc.util.NetworkConnectivityReceiver">
+		    <intent-filter>
+		        <action android:name="android.net.wifi.STATE_CHANGE" ></action>
+		    </intent-filter>
+		</receiver>
+        <!-- <service android:name="com.microsoft.hsg.android.jc.util.ConnectivityService" >
+        </service> -->
     </application>
 
 </manifest>

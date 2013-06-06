@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.util.Log;
 
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
@@ -60,7 +61,8 @@ public class DBHandler {
 		openRequestDb();
 		ArrayList<Request> result = new ArrayList<Request>();
 		Request req = new Request();
-		ObjectSet<Request> objectList = dbRequestContainer.queryByExample(req);
+		ObjectSet<Request> objectList = dbRequestContainer.queryByExample(null);
+		Log.w("DBHandler",":getRequest:: "+objectList);
 		while(objectList.hasNext()){
 			result.add(objectList.next());
 		}
@@ -81,6 +83,7 @@ public class DBHandler {
 	
 	public void addRequest(Request entry){
 		openRequestDb();
+		Log.w("DBHandler",":addRequest:: "+entry.getMethodName());
 		dbRequestContainer.store(entry);
 		dbRequestContainer.commit();
 		closeRequestDb();

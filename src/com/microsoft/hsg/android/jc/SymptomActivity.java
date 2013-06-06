@@ -3,6 +3,7 @@ package com.microsoft.hsg.android.jc;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -137,6 +138,15 @@ public class SymptomActivity extends Activity implements
 
 	}
 
+	public void loadReportActivity(View arg){
+		Intent intent = new Intent(SymptomActivity.this, ReportActivity.class);
+		SymptomActivity.this.startActivity(intent);
+	}
+	
+	public void loadSettingsActivity(View arg){
+		Intent intent = new Intent(SymptomActivity.this, MainActivity.class);
+		SymptomActivity.this.startActivity(intent);
+	}
 	public void onProgressChanged(SeekBar bar, int progress, boolean fromUser) {
 		updatePainScaleObject(bar, progress);
 
@@ -194,7 +204,7 @@ public class SymptomActivity extends Activity implements
 		ProgressDialog progressDialog;
 
 		public PutCustom(String painThreshold) {
-			painScale = painThreshold;
+			//painScale = painThreshold;
 			progressDialog = ProgressDialog.show(SymptomActivity.this, "",
 					"Please wait for put...", true);
 		}

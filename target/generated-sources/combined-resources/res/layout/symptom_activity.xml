@@ -90,14 +90,38 @@
         android:id="@+id/sleepValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
+<View
+  android:layout_width="1dp"
+  android:layout_height="40dp">
+</View>
     <Button
         android:id="@+id/putThing"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:layout_weight=".2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Save" >
+
     </Button>
 
+<LinearLayout
+    style="@android:attr/buttonBarStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <Button 
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    style="@android:attr/buttonBarButtonStyle"
+    android:onClick="loadSettingsActivity"
+    android:text="Settings"/>
+    <Button 
+        android:id="@+id/report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:attr/buttonBarButtonStyle"
+        android:onClick="loadReportActivity"
+        android:text="Report"/>
+ 
+</LinearLayout>
 </LinearLayout>
